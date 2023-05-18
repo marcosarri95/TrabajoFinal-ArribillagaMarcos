@@ -32,100 +32,119 @@
                     </div>
                 </div>
                 <div class="menu">
-                        <div class="vuelo">Vuelos</div>
-                        <div class="tviaje">
-                            <div class="circ">
-                                <div class="circ2"></div>
-                            </div>
-                            <div class="tit">Solo ida</div>
-                            <div class="circ">
-                                <div class="circ2"></div>
-                            </div>
-                            <div class="tit">Ida y vuelta</div>
+                    <div class="vuelo">Vuelos</div>
+                    <div class="tviaje">
+                        <div id="circi">
+                
                         </div>
-                        <div class="sorigen">Origen
+                        <div class="tit">Solo ida</div>
+                        <div id="circiv">
+                            
+                        </div>
+                        <div class="tit">Ida y vuelta</div>
+                    </div>
+                    <div class="sorigen">
+                        <div class="uno">
+                            <label for="filtrar">Filtro:</label><br>
+                            <input type="text" id="filtraro" name="filtrar" value=""><br>
+                        </div>
+                        <div class="uno">
+                            <label for="origen">Origen:</label>
                             <select name="origen" id="origen">
-                                <option value="origen">Seleccionar salida</option>
+                                <option value="origen">Seleccionar</option>
+                            </select>
                         </div>
-                        <div class="sdestino">Destino
-                            <select name="destino" id="destino">
-                                <option value="destino">Seleccionar entrada</option>
-                        </div>
-                                <div class="fechax">
-                                    <div class="fini">
-                                        <input type="date" id="end" name="trip-ini">
-                                    </div>
-                                    <div class="ffin">
-                                        <input type="date" id="end" name="trip-end">
-                                    </div>
-                                </div>
-                            <div class="cantytipo">
-                                <div class="cantPersonas">
-                                    <select name="cant" id="cant">
-                                        <option value="Seleccionar">Cantidad de personas</option>
-                                </div>
-                                    <div class="clase">
-                                        <select name="clase" id="clase">
-                                            <option value="Seleccionar">Seleccionar clase</option>
-                                    </div>
-                            </div>
 
-                            <button>Buscar</button>
-            
+                    </div>
+                    <div class="sdestino">
+                        <div class="uno">
+                            <label for="filtrar">Filtro:</label><br>
+                            <input type="text" id="filtrard" name="filtrar" value=""><br>
+                        </div>
+                        <div class="uno">
+                            <label for="destino">Destino:</label>
+                            <select name="destino" id="destino">
+                                <option value="destino">Seleccionar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fechax">
+                        <div class="fini">
+                            <label for="ini">Fecha de ida:</label>
+                            <input type="date" id="ini" name="trip-ini">
+                        </div>
+                        <div class="ffin">
+                            <label for="ini">Fecha de vuelta:</label>
+                            <input type="date" id="fin" name="trip-end">
+                        </div>
+                    </div>
+                    <div class="cantytipo">
+                        <div class="cantPersonas">
+                            <label for="cant">Cantidad de personas:</label>
+                            <select name="cant" id="cant">
+                                <option value=1>Seleccionar</option>
+                            </select>
+                        </div>
+                        <div class="clase">
+                            <label for="clase">Seleccione la clase:</label>
+                            <select name="clase" id="clase">
+                                <option value="clase">Seleccionar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="buscar">Buscar</button>
+
                 </div>
             </div>
 
-                            <div class="clientes">
-                                <div class="p">
-                                    <div class="titulo">1.2K+</div>
-                                    <div class="desc">Clientes satisfechos</div>
-                                </div>
-                                <div class="p">
-                                    <div class="titulo">100+</div>
-                                    <div class="desc">Aerolíneas</div>
-                                </div>
-                                <div class="p">
-                                    <div class="titulo">10+</div>
-                                    <div class="desc">Años de experiencia</div>
-                                </div>
-                                <div class="p">
-                                    <div class="titulo">1K+</div>
-                                    <div class="desc">Reseñas</div>
-                                </div>
-                            </div>
+            <div class="clientes">
+                <div class="p">
+                    <div class="titulo">1.2K+</div>
+                    <div class="desc">Clientes satisfechos</div>
+                </div>
+                <div class="p">
+                    <div class="titulo">100+</div>
+                    <div class="desc">Aerolíneas</div>
+                </div>
+                <div class="p">
+                    <div class="titulo">10+</div>
+                    <div class="desc">Años de experiencia</div>
+                </div>
+                <div class="p">
+                    <div class="titulo">1K+</div>
+                    <div class="desc">Reseñas</div>
+                </div>
+            </div>
 
 
-                            <div class="srecom">
-                                <div class="t2"></div>
-                                <div class="imgs1">
-                                    <div class="gimg">
-                                        <div class='img'></div>
-                                        <div class='img'></div>
-                                        <div class='img'></div>
-                                    </div>
-                                    <div class="gimg">
-                                        <div class='img'></div>
-                                        <div class='img'></div>
-                                        <div class='img'></div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="srecom">
+                <div class="t2">Sitios recomendados</div>
+                <div class="imgs1">
+                    <div class="gimg">
+                        <div class='img'><img src="./imagenes/ImgM1.png"></div>
+                        <div class='img'><img src="./imagenes/ImgM2.png"></div>
+                        <div class='img'><img src="./imagenes/ImgM3.png"></div>
+                    </div>
+                    <div class="gimg">
+                        <div class='img'><img src="./imagenes/ImgM4.png"></div>
+                        <div class='img'><img src="./imagenes/ImgM5.png"></div>
+                        <div class='img'><img src="./imagenes/ImgM6.png"></div>
+                    </div>
+                </div>
+            </div>
 
-                            <div class="pexclusivos">
-                                <div class="t3"></div>
-                                <div class="imgs2">
-                                    <div class='img2'></div>
-                                    <div class='img2'></div>
-                                </div>
-                            </div>
+            <div class="pexclusivos">
+                <div class="t3">Paquetes exclusivos</div>
+                <div class="imgs2">
+                    <div class='img2'><img src="./imagenes/ImgP1.png"></div>
+                    <div class='img2'><img src="./imagenes/ImgP2.png"></div>
+                </div>
+            </div>
 
 
-                        </body>
+        </body>
 
-                        <script src='java.js' defer></script>
-                    </body>
-                </html>
-            </body>
-        </html>
+        <script src='./Javascript/paginaPrincipal.js' defer></script>
     </body>
 </html>
