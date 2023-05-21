@@ -2,22 +2,25 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     background: white;
-    flex-direction: column;
+    min-height: 100vh;
+    min-width: auto;
     justify-content: center;
 }
 
 /* INICIO ENCABEZADO*/
 .fprincipal{
-   background-image: url("../imagenes/fprincipal.png");
-    display: block;
+    background-image: url("../imagenes/fprincipal.png");
+    background-size: 100% 100%;
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
+    padding-bottom: 120px;
+    padding-left: 120px;
+    padding-right: 120px;
+    
 }
 
 .header{
     display:flex;
-    height: auto;
     padding: 32px;
     align-items: center;
     justify-content: space-around;
@@ -25,14 +28,12 @@ body {
 }
 
 .gofly{
-    width: 175px;
-    height: 48px;
-    align-self: center;
+    align-self: top;
 }
 
 .inicioSesion{
-    width: 278px;
-    height: 48px;
+    width: 230px;
+    height: 35px;
     background: #7ACCB8;
     font-size: 18px;
     font-style:'Open Sans';
@@ -45,14 +46,11 @@ body {
 
 /* FIN ENCABEZADO*/
 /* INICIO FORMULARIO CON EL USUARIO*/
+
 .principal{
     display: flex;
-    width: 100%;
-    margin:auto;
-    height: 1200px;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .t1{
@@ -73,16 +71,15 @@ body {
 }
 
 .menu{
-    width: 1001px;
-    height: 450px;
     display: flex;
     flex-direction: column;
-    margin: 16px;
+    padding: 48px;
     background-color: #FFFFFF;
     border-radius: 80px;
     align-items: center;
     justify-content: center;
 }
+
 .tviaje{
     display: flex;
     align-items: center;
@@ -110,22 +107,23 @@ body {
 
 
 select {
-    padding: 8px 10px;
+    padding: 5px 8px;
     border-radius: 100px;
     background-color: #FFFFFF;
     border:1px solid #072B31;
-    width: 250px;
+    width: 200px;
   }
 
   input[type=date] {
     padding: 5px 8px;
+    width: 180px;
     border-radius: 100px;
     background-color: #FFFFFF;
     border:1px solid #072B31;
   }
 
   input[type=text] {
-    width: 250px;
+    width: 183px;
     padding: 5px 8px;
     border-radius: 100px;
     background-color: #FFFFFF;
@@ -149,40 +147,67 @@ select {
     font-size: 30px;
     color: #072B31;
     font-weight: bold;
-    margin: 36px;
+    align-self:center;
 }
 
-.tviaje, .fechax, .cantytipo{
+.tviaje{
 display: flex;
 margin: 16px;
+align-self: center;
 }
+
+    
+.cantytipo{
+        display: flex;
+        margin: 16px;
+        justify-content: space-between;
+  }
 
 .fechax{
-    width: 769px;
+    display: flex;
+    justify-content: center;
 }
 
+label{
+    align-self: center;
+}
 
-.sorigen, .sdestino{
-    margin: 16px;
-    width: 769px;
+.fini{
     display: flex;
+    flex-direction: column;
+}
+
+.ffin{
+    display: flex;
+    flex-direction: column;
+}
+
+.sorigen{
+    display: flex;
+    justify-content: center;
+}
+.sdestino{
+    display: flex;
+    justify-content: center;
 }
 
 .uno{
     display: flex;
-    flex: 1;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 .cantytipo{
     display: flex;
+    justify-content: center;
 }
 
-.buscar{
-    width: 769px;
-    height: 48px;
+#buscar{
+    width: 400px;
+    height: 32px;
     background: #003D4C;
-    font-size: 18px;
+    font-size: 14px;
     font-style:'Open Sans';
     color: #FFFFFF;
     border-radius: 100px;
@@ -196,11 +221,9 @@ margin: 16px;
 /* INICIO MUESTRA DE LA PAGINA*/
 .clientes{
     display: flex;
-    height: 150px;
-    margin:auto;
     background: #FFFFFF;
-    align-items: center;
     justify-content: center;
+    padding: 48px;
 }
 
 .p{
@@ -229,43 +252,32 @@ margin: 16px;
 /* FIN MUESTRA DE LA PAGINA*/
 /* INICIO MUESTRA DE SITIOS RECOMENDADOS*/
 .srecom{
-    display: block;
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    margin:auto;
-    height: 1100px;
     background-color: #FFFFFF;
+    
 }
 
 .t2{
-    width: 100%;
-    height: 50px;
-    margin: 24px;
     background-color: #FFFFFF;
     font-style:'Open Sans';
     font-size: 45px;
     color: #072B31;
     font-weight: bold;
     text-align:left;
-}
-.imgs1{
-    display: flex;
-    height: 950px;
-    flex-direction: column;
+    margin-left: 74px;
 }
 
 .gimg{
     display:flex;
     flex: auto;
-    height: 150px;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 40px;
 }
 
-.img{
+#img1, #img2, #img3{
     border-radius: 50px;
-    width: 383px;
-    height: 435px;
     margin-left: 32px;
     margin-right: 32px;
 }
@@ -273,36 +285,122 @@ margin: 16px;
 /* FIN MUESTRA DE SITIOS RECOMENDADOS*/
 /* INICIO MUESTRA DE PAQUETES EXCLUSIVOS*/
 .pexclusivos{
-    display: block;
+    margin-top: 36px;
+    display: flex;
     flex-direction: column;
-    height: 800px;
     background-color: #FFFFFF;
-    border: 2px solid red;
 }
 
 .t3{
-    width: 100%;
-    height: 50px;
-    margin: 24px;
     background-color: #FFFFFF;
     font-style:'Open Sans';
     font-size: 45px;
     color: #072B31;
     font-weight: bold;
     text-align:left;
+    margin-left: 74px;
 }
 
 .imgs2{
     display:flex;
-    justify-content: center;
     flex-wrap: wrap;
+    padding: 40px;
+    justify-content: center;
 }
 
 .img2{
-    border-radius: 50px;
-    width: 383px;
-    height: 435px;
     flex: 1 1 auto;
+    border-radius: 50px;
+    margin-bottom: 18px;
+    margin-left: 24px;
+    margin-right: 24px;
     
 }
 /* FIN MUESTRA DE PAQUETES EXCLUSIVOS*/
+/*INICIO SUSCRIPCION*/
+
+.ofexclusivas{
+    display: flex;
+    flex-direction: column;
+    background-color: #072B31;
+    padding: 24px;
+}
+
+.t4{
+    font-style:'Open Sans';
+    font-size: 45px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align:left;
+    padding: 24px;
+    align-self: center;
+}
+
+.botones{
+    display: flex;
+    align-self: center;
+}
+
+.boton1{
+    flex: 2;
+    font-style:'Open Sans';
+    font-size: 18px;
+    color: #7ACCB8;
+    font-weight: bold;
+    width: 460px;
+    border-radius: 50px;
+    background-color: #072B31;
+    height: 36px;
+    margin-right: 16px;
+}
+
+.boton2{
+    flex: 1;
+    font-style:'Open Sans';
+    font-size: 18px;
+    color: #072B31;
+    font-weight: bold;
+    width: 250px;
+    border-radius: 50px;
+    background-color: #7ACCB8;
+    height: 36px;
+}
+
+.poli{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 24px;
+}
+
+.politicaP{
+    font-style:'Open Sans';
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+/*FIN SUSCRIPCION*/
+/*INICIO BOTTOM*/
+
+.bottom{
+    display: flex;
+    padding: 36px;
+    justify-content: center;
+    background-color: #FFFFFF;
+    align-items: start;
+}
+
+.min{
+    font-style:'Open Sans';
+    font-size: 18px;
+    color: #072B31;
+}
+
+.acercade, .informacionU, .socialMedia{
+    padding: 36px;
+}
+
+.redes{
+    margin-top: 16px;
+}
+/*FIN BOTTOM*/

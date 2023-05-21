@@ -34,37 +34,29 @@
                 <div class="menu">
                     <div class="vuelo">Vuelos</div>
                     <div class="tviaje">
-                        <div id="circi">
-                
-                        </div>
+                        <div id="circi"></div>
                         <div class="tit">Solo ida</div>
-                        <div id="circiv">
-                            
-                        </div>
+                        <div id="circiv"></div>
                         <div class="tit">Ida y vuelta</div>
                     </div>
                     <div class="sorigen">
                         <div class="uno">
-                            <label for="filtrar">Filtro:</label><br>
-                            <input type="text" id="filtraro" name="filtrar" value=""><br>
+                            <input type="text" id="filtraro" name="filtrar" value="Filtrar por nombre"><br>
                         </div>
                         <div class="uno">
-                            <label for="origen">Origen:</label>
                             <select name="origen" id="origen">
-                                <option value="origen">Seleccionar</option>
+                                <option value="origen">Seleccionar origen</option>
                             </select>
                         </div>
 
                     </div>
                     <div class="sdestino">
                         <div class="uno">
-                            <label for="filtrar">Filtro:</label><br>
-                            <input type="text" id="filtrard" name="filtrar" value=""><br>
+                            <input type="text" id="filtrard" name="filtrar" value="Filtrar por nombre"><br>
                         </div>
                         <div class="uno">
-                            <label for="destino">Destino:</label>
                             <select name="destino" id="destino">
-                                <option value="destino">Seleccionar</option>
+                                <option value="destino">Seleccionar destino</option>
                             </select>
                         </div>
                     </div>
@@ -80,71 +72,100 @@
                     </div>
                     <div class="cantytipo">
                         <div class="cantPersonas">
-                            <label for="cant">Cantidad de personas:</label>
                             <select name="cant" id="cant">
-                                <option value=1>Seleccionar</option>
+                                <option value="cant">Cantidad de personas</option>
                             </select>
                         </div>
                         <div class="clase">
-                            <label for="clase">Seleccione la clase:</label>
                             <select name="clase" id="clase">
-                                <option value="clase">Seleccionar</option>
+                                <option value="clase">Seleccione la clase</option>
                             </select>
                         </div>
                     </div>
 
-                    <button class="buscar">Buscar</button>
+                    <button id="buscar">Buscar</button>
 
                 </div>
             </div>
 
-            <div class="clientes">
-                <div class="p">
-                    <div class="titulo">1.2K+</div>
-                    <div class="desc">Clientes satisfechos</div>
-                </div>
-                <div class="p">
-                    <div class="titulo">100+</div>
-                    <div class="desc">Aerolíneas</div>
-                </div>
-                <div class="p">
-                    <div class="titulo">10+</div>
-                    <div class="desc">Años de experiencia</div>
-                </div>
-                <div class="p">
-                    <div class="titulo">1K+</div>
-                    <div class="desc">Reseñas</div>
-                </div>
+        </div>
+
+        <div class="clientes">
+            <div class="p">
+                <div class="titulo">1.2K+</div>
+                <div class="desc">Clientes satisfechos</div>
             </div>
-
-
-            <div class="srecom">
-                <div class="t2">Sitios recomendados</div>
-                <div class="imgs1">
-                    <div class="gimg">
-                        <div class='img'><img src="./imagenes/ImgM1.png"></div>
-                        <div class='img'><img src="./imagenes/ImgM2.png"></div>
-                        <div class='img'><img src="./imagenes/ImgM3.png"></div>
-                    </div>
-                    <div class="gimg">
-                        <div class='img'><img src="./imagenes/ImgM4.png"></div>
-                        <div class='img'><img src="./imagenes/ImgM5.png"></div>
-                        <div class='img'><img src="./imagenes/ImgM6.png"></div>
-                    </div>
-                </div>
+            <div class="p">
+                <div class="titulo">100+</div>
+                <div class="desc">Aerolíneas</div>
             </div>
-
-            <div class="pexclusivos">
-                <div class="t3">Paquetes exclusivos</div>
-                <div class="imgs2">
-                    <div class='img2'><img src="./imagenes/ImgP1.png"></div>
-                    <div class='img2'><img src="./imagenes/ImgP2.png"></div>
-                </div>
+            <div class="p">
+                <div class="titulo">10+</div>
+                <div class="desc">Años de experiencia</div>
             </div>
+            <div class="p">
+                <div class="titulo">1K+</div>
+                <div class="desc">Reseñas</div>
+            </div>
+        </div>
 
 
-        </body>
+        <div class="srecom">
+            <div class="t2">Sitios recomendados</div>
+                <div class="gimg">
+                    <div id='img1'><img src="./imagenes/ImgM1.png"></div>
+                    <div id='img2'><img src="./imagenes/ImgM2.png"></div>
+                    <div id='img3'><img src="./imagenes/ImgM3.png"></div>
+                </div>
+        </div>
 
-        <script src='./Javascript/paginaPrincipal.js' defer></script>
+        <div class="pexclusivos">
+            <div class="t3">Paquetes exclusivos</div>
+            <div class="imgs2">
+                <div class='img2'><img src="./imagenes/ImgP1.png"></div>
+                <div class='img2'><img src="./imagenes/ImgP2.png"></div>
+            </div>
+        </div>
+
+        <div class="ofexclusivas">
+            <div class="t4">¿Quieres recibir ofertas exclusivas?</div>
+            <div class="botones">
+                <button class="boton1">Ingresa tu email</button>
+                <button class="boton2">Suscribirme</button>
+            </div>
+            <div class="poli">
+            <div class="politicaP">Al suscribirse, recibiras ofertas exclusivas de Go Flight en su cuenta de email</div>
+            <div class="politicaP">Para mas informacion consulta las <strong>politicas de privacidad.</strong></div>
+        </div>
+        </div>
+
+        <div class="bottom">
+            <div class="acercade">
+                <div class="min"><strong>Acerca de Go Flight</strong></div>
+                <div class="min">¿Necesitas ayuda?</div>
+                <div class="min">¿Quienes somos?</div>
+                <div class="min">Terminos y condiciones</div>
+                <div class="min">Politica de privacidad</div>
+                <div class="min">Contacto</div>
+            </div>
+            <div class="informacionU">
+                <div class="min"><strong>Informacion util</strong></div>
+                <div class="min">Preguntas frecuentes</div>
+                <div class="min">Promociones vigentes</div>
+                <div class="min">Programa PreViaje</div>
+                <div class="min">Calendario feriados de Argentina</div>
+            </div>
+            <div class="socialMedia">
+                <div class="iconoGo"><img src="./imagenes/GoFly.png"></div>
+                <div class="min">Somos Go Flight, una empresa con mas de 10 años de </div>
+                <div class="min">experiencia en aerolineas y paquetes turisticos en el pais </div>
+                <div class="min">Estamos comprometidos con nuestros clientes y usuarios. </div>
+                <div class="redes"><img src="./imagenes/SocialMedia.png"></div>
+            </div>
+        </div>
+
     </body>
-</html>
+
+    <script src='./Javascript/paginaPrincipal.js' defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html></body></html>
