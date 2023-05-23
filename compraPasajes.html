@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Go Flight ✈</title>
+        <link rel="stylesheet" href="./styles/cpasajes.css">
+
+    </head>
+    <body>
+
+        <div class="fprincipal">
+
+            <div class="header">
+                <div class="gofly">
+                    <img src="./imagenes/SimboloGoFly.png">
+                </div>
+                <button class="inicioSesion">
+                    <strong>Ingresar</strong>
+                </button>
+            </div>
+
+            <div class="principal">
+                <div class="t">
+                    <strong>Elegi tu vuelo!</strong>
+                </div>
+
+                <div class="vuelo">
+                    <div class="origen">
+                        <div class="tit">Desde</div>
+                        <div id="origenv"></div>
+                    </div>
+                    <div class="simbolo"><img src="./imagenes/IdaYVuelta.png"></div>
+                    <div class="destino">
+                        <div class="tit">Hasta</div>
+                        <div id="destinov"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="resultados">
+
+            <div class="t1">
+                <strong>Resultados</strong>
+            </div>
+
+            <div class="ticket">
+                <div class="vuelos">
+                    <div class="simb"><img src="./imagenes/flyBondi.png"></div>
+                    <div class="ida">
+                        <div class="origenx">
+                            <div id="lugar1"></div>
+                            <div id="fecha1"></div>
+                            <div id="hora1v1"></div>
+                        </div>
+                        <div class="simbx"><img src="./imagenes/vuelo.png"></div>
+                        <div class="destinox">
+                            <div id="lugar2"></div>
+                            <div id="fecha2a"></div>
+                            <div id="hora2v1"></div>
+                        </div>
+                    </div>
+                    <div class="vuelta">
+                        <div class="origenx">
+                            <div id="lugar1"></div>
+                            <div id="fecha1b"></div>
+                            <div id="hora3v1"></div>
+                        </div>
+                        <div class="simbx"><img src="./imagenes/vuelo2.png"></div>
+                        <div class="destinox">
+                            <div id="lugar2"></div>
+                            <div id="fecha2b"></div>
+                            <div id="hora4v1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="precios">
+                    <div class="min2">
+                        Precio por adulto
+                    </div>
+                    <div id="precAd1">
+                        
+                    </div>
+                    <div class="min2">
+                        Impuestos, tasas y cargos
+                    </div>
+                    <div id="precITC1">
+                        <strong></strong>
+                    </div>
+                    <div class="min2">
+                        Total
+                    </div>
+                    <div id="total1">
+                        <strong></strong>
+                    </div>
+                    <button id="comp1">Comprar</button>
+                </div>
+            </div>
+
+            <div class="ticket">
+              <div class="vuelos">
+                  <div class="simb"><img src="./imagenes/aerolineas.png"></div>
+                  <div class="ida">
+                      <div class="origenx">
+                          <div id="lugar1"></div>
+                          <div id="fecha1"></div>
+                          <div id="hora1v2"></div>
+                      </div>
+                      <div class="simbx"><img src="./imagenes/vuelo.png"></div>
+                      <div class="destinox">
+                          <div id="lugar2"></div>
+                          <div id="fecha2a"></div>
+                          <div id="hora2v2"></div>
+                      </div>
+                  </div>
+                  <div class="vuelta">
+                      <div class="origenx">
+                          <div id="lugar1"></div>
+                          <div id="fecha1b"></div>
+                          <div id="hora3v2"></div>
+                      </div>
+                      <div class="simbx"><img src="./imagenes/vuelo2.png"></div>
+                      <div class="destinox">
+                          <div id="lugar2"></div>
+                          <div id="fecha2b"></div>
+                          <div id="hora4v2"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="precios">
+                  <div class="min2">
+                      Precio por adulto
+                  </div>
+                  <div id="precAd2">
+                      <strong></strong>
+                  </div>
+                  <div class="min2">
+                      Impuestos, tasas y cargos
+                  </div>
+                  <div id="precITC2">
+                      <strong></strong>
+                  </div>
+                  <div class="min2">
+                      Total
+                  </div>
+                  <div id="total2">
+                      <strong></strong>
+                  </div>
+                  <button id="comp2">Comprar</button>
+              </div>
+          </div>
+
+          <div class="ticket">
+            <div class="vuelos">
+                <div class="simb"><img src="./imagenes/latamAirlines.png"></div>
+                <div class="ida">
+                    <div class="origenx">
+                        <div id="lugar1"></div>
+                        <div id="fecha1"></div>
+                        <div id="hora1v3"></div>
+                    </div>
+                    <div class="simbx"><img src="./imagenes/vuelo.png"></div>
+                    <div class="destinox">
+                        <div id="lugar2"></div>
+                        <div id="fecha2a"></div>
+                        <div id="hora2v3"></div>
+                    </div>
+                </div>
+                <div class="vuelta">
+                    <div class="origenx">
+                        <div id="lugar1"></div>
+                        <div id="fecha1b"></div>
+                        <div id="hora3v3"></div>
+                    </div>
+                    <div class="simbx"><img src="./imagenes/vuelo2.png"></div>
+                    <div class="destinox">
+                        <div id="lugar2"></div>
+                        <div id="fecha2b"></div>
+                        <div id="hora4v3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="precios">
+                <div class="min2">
+                    Precio por adulto
+                </div>
+                <div id="precAd3">
+                    <strong></strong>
+                </div>
+                <div class="min2">
+                    Impuestos, tasas y cargos
+                </div>
+                <div id="precITC3">
+                    <strong></strong>
+                </div>
+                <div class="min2">
+                    Total
+                </div>
+                <div id="total3">
+                    <strong></strong>
+                </div>
+                <button id="comp3">Comprar</button>
+            </div>
+        </div>
+            
+
+        </div>
+
+        <div class="ofexclusivas">
+            <div class="t4">¿Quieres recibir ofertas exclusivas?</div>
+            <div class="botones">
+                <button class="boton1">Ingresa tu email</button>
+                <button class="boton2">Suscribirme</button>
+            </div>
+            <div class="poli">
+                <div class="politicaP">Al suscribirse, recibiras ofertas exclusivas de Go Flight en su cuenta de email</div>
+                <div class="politicaP">Para mas informacion consulta las
+                    <strong>politicas de privacidad.</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="acercade">
+                <div class="min">
+                    <strong>Acerca de Go Flight</strong>
+                </div>
+                <div class="min">¿Necesitas ayuda?</div>
+                <div class="min">¿Quienes somos?</div>
+                <div class="min">Terminos y condiciones</div>
+                <div class="min">Politica de privacidad</div>
+                <div class="min">Contacto</div>
+            </div>
+            <div class="informacionU">
+                <div class="min">
+                    <strong>Informacion util</strong>
+                </div>
+                <div class="min">Preguntas frecuentes</div>
+                <div class="min">Promociones vigentes</div>
+                <div class="min">Programa PreViaje</div>
+                <div class="min">Calendario feriados de Argentina</div>
+            </div>
+            <div class="socialMedia">
+                <div class="iconoGo"><img src="./imagenes/GoFly.png"></div>
+                <div class="min">Somos Go Flight, una empresa con mas de 10 años de
+                </div>
+                <div class="min">experiencia en aerolineas y paquetes turisticos en el pais
+                </div>
+                <div class="min">Estamos comprometidos con nuestros clientes y usuarios.
+                </div>
+                <div class="redes"><img src="./imagenes/SocialMedia.png"></div>
+            </div>
+        </div>
+
+    </body>
+
+    <script src='./Javascript/compraPasajes.js' defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+</html></body></html></body></html>

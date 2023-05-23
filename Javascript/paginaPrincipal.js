@@ -16,7 +16,7 @@ class Viaje{
 function creaViaje(origen, destino, cantidad, clase, fini, ffin, tipo){
     const viaje = new Viaje(origen,destino,cantidad,fini,ffin,clase, tipo);
     const dolar=valordolar();
-    localStorage.setItem('dolarTurista', dolar);
+    localStorage.setItem('dolarOf', dolar);
     enJSON = JSON.stringify(viaje);
     localStorage.setItem("viaje", enJSON);
     //luego de esto pasamos a la siguiente pagina donde compraremos el vuelo segun su precio
@@ -25,9 +25,8 @@ function creaViaje(origen, destino, cantidad, clase, fini, ffin, tipo){
 
 ///Funcion que determina el valor del dolar turista
 function valordolar(){
-    let dolarof = Math.round((Math.random()*100 + 200)*100)/100; //genera un valor de dolar oficial entre 200 y 300, con 2 decimales
-    
-    return Math.round((dolarof*1.3)*1.35);
+    let dolarof = Math.round((Math.random()*50 + 200)*100)/100; //genera un valor de dolar oficial entre 200 y 250 con 2 decimales
+    return Math.round(dolarof);
 }
 
 //funcion que inicializa el tipo de de viaje (si es solamente ida, o si es ida y vuelta)
@@ -301,8 +300,15 @@ btn.addEventListener('click',function(){
     }
     else{
         const fechai = document.getElementById('ini');
-        const fechaf = document.getElementById('fin');
-        creaViaje(origen.value,destino.value,cantp.value,clase.value,fechai.value,fechaf.value, tipo);
+        if(tipo==true){
+            const fechaf = document.getElementById('fin');
+            creaViaje(origen.value,destino.value,cantp.value,clase.value,fechai.value,fechaf.value, tipo);
+        }
+        else{
+            creaViaje(origen.value,destino.value,cantp.value,clase.value,fechai.value,null, tipo);
+        }
+        
+        
     }
 });
 
@@ -314,5 +320,6 @@ const fechaf = document.getElementById('fin');
 fechai.addEventListener('change',function(){
     if(tipo==true){
     fechaf.value = fechai.value;
+    fechaf.min = fechai.value;
     }
 });
