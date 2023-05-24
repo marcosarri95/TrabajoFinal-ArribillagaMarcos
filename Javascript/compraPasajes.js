@@ -215,6 +215,7 @@ button2.addEventListener('click', function(){
     const datoViaje = new DatosViaje(pviaje.calculaPrecioTotal(), hsalida2, hllegada2, hsvuelta2, hsllegada2, 2);
     enJSON = JSON.stringify(datoViaje);
     localStorage.setItem("DatosViaje", enJSON);
+    document.location.href = "./formularioPyT.html";
 });
 
 
@@ -223,6 +224,7 @@ button3.addEventListener('click', function(){
     const datoViaje = new DatosViaje(pviaje.calculaPrecioTotal(), hsalida3, hllegada3, hsvuelta3, hsllegada3, 3);
     enJSON = JSON.stringify(datoViaje);
     localStorage.setItem("DatosViaje", enJSON);
+    document.location.href = "./formularioPyT.html";
 });
 
 
