@@ -135,7 +135,7 @@ function evaluaCamposNombre(cantidad){
         personas.push(cliente);
     }
     personas.forEach(el => {
-        if((el.nombre!="")&&(el.apellido!="")&&(el.DNI!="")&&(el.fnac!="")&&(el.nacionalidad!="")){
+        if((el.nombre.trim()!="")&&(el.apellido.trim()!="")&&(el.DNI!="")&&(el.fnac!="")&&(el.nacionalidad.trim()!="")){
             cont++; // si el formulario cumple lo debido, incrementara el contador
         }
     });
@@ -169,7 +169,7 @@ function evaluaCamposMedioPago(){
 function evaluaCamposCorreo(){
     const mail = document.getElementById("mail");
     const telefono = document.getElementById("telef");
-    if((mail.value!="")&&(telefono.value!="")){
+    if((mail.value.trim()!="")&&(telefono.value.trim()!="")){
         const datoContacto = new DatosContacto(mail.value.trim().toLowerCase(), telefono.value)
         enJSON = JSON.stringify(datoContacto);
         localStorage.setItem("DatosContacto", enJSON);
@@ -188,7 +188,7 @@ function evaluaCamposTarjeta(){
     const fVenc = document.getElementById("fvenc");
     const cSeg = document.getElementById("csegu");
 
-    if((nroTarjeta.value!="")&&(nTitular.value!="")&&(fVenc.value!="")&&(cSeg.value!="")){
+    if((nroTarjeta.value!="")&&(nTitular.value.trim()!="")&&(fVenc.value.trim()!="")&&(cSeg.value.trim()!="")){
         const nTarjeta = new Tarjeta(nroTarjeta.value, nTitular.value.trim().toUpperCase(), fVenc.value, cSeg.value)
         enJSON = JSON.stringify(nTarjeta);
         localStorage.setItem("tarjetaPago", enJSON);
