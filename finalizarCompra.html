@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             Go Flight ✈</title>
-        <link rel="stylesheet" href="./styles/formularioPyT.css">
+        <link rel="stylesheet" href="./styles/finalizarCompra.css">
 
     </head>
     <body>
@@ -24,89 +24,75 @@
 
             <div class="principal">
                 <div class="t">
-                    Ya casi estas! completa tus datos y
+                    <strong>Listo!</strong>
                 </div>
-                <div class="t">
-                    finaliza la compra.
-                </div>
-
             </div>
 
 
         </div>
 
-        <div class="tit">
-            Quienes viajan?
-        </div>
 
-        <div class="tpersonas">
-        
-      </div>
+        <div class="resultados">
 
-      
-
-        <div class="tit">
-            Como podemos contactarte?
-        </div>
-
-        <div class="fcontacto">
-            <div class="email">
-                <div class="tituloC">Correo electronico:</div>
-                <input type="text" maxlength="35" minlength="3" id="mail" name="mail"><br>
+            <div class="t1">
+                <strong>Resumen de la compra</strong>
             </div>
 
-            <div class="tel">
-                <div class="tituloC">Numero de telefono:</div>
-                <input type="number" maxlength="30" minlength="3" id="telef" name="telef"><br>
-            </div>
-
-        </div>
-
-        <div class="tit">
-            Ingresa los datos de la tarjeta
-        </div>
-
-        <div class="compra">
-            <div class="ftarjeta">
-                <div class="ntarj">
-                    <div class="tituloC">Numero de la tarjeta:</div>
-                    <input type="number" id="ntarj" name="ntarj"><br>
-                </div>
-
-                <div class="ttarjeta">
-                    <div class="tituloC">Titular de la tarjeta:</div>
-                    <input type="text" maxlength="30" minlength="3" id="ntitular" name="titular"><br>
-                </div>
-
-                <div class="datosT">
-                    <div class="vencim">
-                        <div class="tituloC">Vencimiento:</div>
-                        <input type="date" id="fvenc" name="fvenc"><br>
-                    </div>
-                    <div class="cseg">
-                        <div class="tituloC">Codigo de seguridad:</div>
-                        <input type="password" id="csegu" name="csegu"><br>
+            <div class="ticket">
+                <div class="vuelos">
+                    <div class="simb"></div>
+                    <div class="ida">
+                        <div class="origenx">
+                            <div id="lugar1"></div>
+                            <div id="fecha1"></div>
+                            <div id="hora1v1"></div>
+                        </div>
+                        <div class="simbx"><img src="./imagenes/vuelo.png"></div>
+                        <div class="destinox">
+                            <div id="lugar2"></div>
+                            <div id="fecha2a"></div>
+                            <div id="hora2v1"></div>
+                        </div>
                     </div>
                 </div>
-
             </div>
-            <div class="compras">
-                <div class="mCompra">
-                    <select name="opcompra" id="opcompra">
-                        <option value=0>Seleccione el medio de pago</option>
-                    </select>
-                </div>
 
-                    <div class="division">
-                    <div id="precioF"></div>
-                    <div id="cuotaF"></div>
-                    </div>
-                    <button id="comprar">Comprar</button>
+            <div class="t1">
+                <strong>
+                    Pasajeros</strong>
+            </div>
+
+            <div class="tpersonas">
                 
+            </div>
 
+            <div class="t1">
+                <strong>
+                    Metodo de pago</strong>
+            </div>
+
+            <div class="metodop">
+                <div class="metodoS">
+                    <div class="tituloC">Metodo de pago seleccionado</div>
+                    <div id="mselec"></div>
+                </div>
+                <div class="precioF">
+                    <div class="tituloC">Precio final</div>
+                    <div id="precio">$123123</div>
+                </div>
+                <div class="qr">
+                    <img src="./imagenes/codigoQR.png">
+                </div>
+            </div>
+
+            <div class="botones2">
+                <button id="finalizar">Finalizar</button>
+                <button class="descarga">Descargar comprobante</button>
             </div>
 
         </div>
+
+
 
         <div class="ofexclusivas">
             <div class="t4">¿Quieres recibir ofertas exclusivas?</div>
@@ -156,8 +142,7 @@
 
     </body>
 
-    <script src='./Javascript/formularioPyT.js' defer></script>
+    <script src='./Javascript/finalizarCompra.js' defer></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-
-</html></body></html></body></html>
+</html></body></html></body></html></body></html>

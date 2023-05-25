@@ -131,7 +131,7 @@ function evaluaCamposNombre(cantidad){
         const pais = document.getElementById("pais"+i);
         const dni = document.getElementById("dni"+i);
         const fnac = document.getElementById("fnac"+i);
-        const cliente = new Cliente(nombre.value,apellido.value,dni.value,fnac.value,pais.value);
+        const cliente = new Cliente(nombre.value.trim().toUpperCase(),apellido.value.trim().toUpperCase(),dni.value,fnac.value,pais.value.trim().toUpperCase());
         personas.push(cliente);
     }
     personas.forEach(el => {
@@ -170,7 +170,7 @@ function evaluaCamposCorreo(){
     const mail = document.getElementById("mail");
     const telefono = document.getElementById("telef");
     if((mail.value!="")&&(telefono.value!="")){
-        const datoContacto = new DatosContacto(mail.value, telefono.value)
+        const datoContacto = new DatosContacto(mail.value.trim().toLowerCase(), telefono.value)
         enJSON = JSON.stringify(datoContacto);
         localStorage.setItem("DatosContacto", enJSON);
         return true;
@@ -189,7 +189,7 @@ function evaluaCamposTarjeta(){
     const cSeg = document.getElementById("csegu");
 
     if((nroTarjeta.value!="")&&(nTitular.value!="")&&(fVenc.value!="")&&(cSeg.value!="")){
-        const nTarjeta = new Tarjeta(nroTarjeta.value, nTitular.value, fVenc.value, cSeg.value)
+        const nTarjeta = new Tarjeta(nroTarjeta.value, nTitular.value.trim().toUpperCase(), fVenc.value, cSeg.value)
         enJSON = JSON.stringify(nTarjeta);
         localStorage.setItem("tarjetaPago", enJSON);
         return true;
@@ -218,7 +218,11 @@ for (let j = 0; j < tipoPago.length ; j++) {
 let precioF = document.getElementById("precioF");
 precioF.innerHTML = "Costo viaje $ "+datosViaje.precioF;    
 
+
+
+
 //evento para cambiar el valor de las cuotas en funcion de la eleccion del usuario
+let preciototal;
 selec.addEventListener('change', function(){
     const cuota = document.getElementById("cuotaF");
     switch(selec.value){
@@ -226,21 +230,30 @@ selec.addEventListener('change', function(){
             cuota.innerHTML = "Seleccione una opcion correcta de pago";
         break;
         case '1':
+             preciototal = datosViaje.precioF;
+             localStorage.setItem("preciofinal", preciototal);
             cuota.innerHTML = "";
         break;
         case '2':
-            cuota.innerHTML = "3 cuotas de $"+ Math.round((datosViaje.precioF*(1+(interes/100)))/3);
-            precioF.innerHTML = "Costo viaje $ "+Math.round(datosViaje.precioF*(1+(interes/100)));
+            preciototal = Math.round(datosViaje.precioF*(1+(interes/100)));
+            cuota.innerHTML = "3 cuotas de $"+ Math.round(preciototal/3);
+            precioF.innerHTML = "Costo viaje $ "+preciototal;
+            localStorage.setItem("preciofinal", preciototal);
         break;
         case '3':
-            cuota.innerHTML = "6 cuotas de $"+ Math.round((datosViaje.precioF*(1+(interes/100)))/6);
-            precioF.innerHTML = "Costo viaje $ "+Math.round(datosViaje.precioF*(1+(interes/100)));
+            preciototal = Math.round(datosViaje.precioF*(1+(interes/100)));
+            cuota.innerHTML = "6 cuotas de $"+ Math.round(preciototal/6);
+            precioF.innerHTML = "Costo viaje $ "+preciototal;
+            localStorage.setItem("preciofinal", preciototal);
         break;
         default:
-                cuota.innerHTML = "12 cuotas de $"+ Math.round((datosViaje.precioF*(1+(interes/100)))/12);
-                precioF.innerHTML = "Costo viaje $ "+Math.round(datosViaje.precioF*(1+(interes/100)));
+            preciototal = Math.round(datosViaje.precioF*(1+(interes/100)));
+                cuota.innerHTML = "12 cuotas de $"+ Math.round(preciototal/12);
+                precioF.innerHTML = "Costo viaje $ "+preciototal;
+                localStorage.setItem("preciofinal", preciototal);
         break;
     }
+    
 });
 
 const btn = document.getElementById("comprar");
@@ -269,8 +282,8 @@ btn.addEventListener('click', function(){
     }
     if(enviarMensaje==true){mensajeError(respuesta)}
     else{
-        //document.location.href = "./compraPasajes.html";
-        console.log("pasamos a la pagina siguiente");
+        document.location.href = "./finalizarCompra.html";
+        
     }
 
 });
